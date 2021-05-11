@@ -37,8 +37,8 @@
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
+    <mat-toolbar color="" class="d-flex position-relative">
+      <!-- <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
@@ -46,8 +46,9 @@
         *ngIf="isHandset$ | async"
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>koolPetProducts</span>
+      </button> -->
+      <div class="profile-name">Klanten</div>
+      <div class="toolbar-line"></div>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>

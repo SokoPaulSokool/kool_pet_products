@@ -48,3 +48,23 @@
     text-align: center;
   }
 }
+
+.toolbar-line {
+  background: $light-green;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.profile-name {
+  background: $light-green;
+  position: absolute;
+  padding: 5px 30px 0px 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  bottom: 0;
+  right: 10px;
+  color: $dark-green;
+}
