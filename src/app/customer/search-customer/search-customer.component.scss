@@ -1,0 +1,13 @@
+@import "../../../sass-helpers/colors.scss";
+.search-item{
+  margin-top: 200px;
+  .search-input{
+    border: 2px solid $light-green;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 20px;
+    &:focus{
+      outline: 0 none;
+    }
+  }
+}

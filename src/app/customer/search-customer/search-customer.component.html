@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center w-100 h-100">
+  <div class="search-item">
+    <div class="row">
+      <div class="col">
+        <input
+          class="search-input"
+          [formControl]="searchContral"
+          [(ngModel)]="searchData"
+          placeholder="Company"
+        />
+
+        <button mat-fab class="bg-light-green" (click)="submit()">
+          <mat-icon>add</mat-icon>
+        </button>
+        <p>{{ searchData }}</p>
+      </div>
+    </div>
+  </div>
+</div>
