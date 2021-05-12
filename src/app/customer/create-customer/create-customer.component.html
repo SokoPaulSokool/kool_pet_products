@@ -1,8 +1,18 @@
-<mat-card class="dashboard-card h-75 m-3 mat-elevation-z8">
-  <img class="close-icon" src="../../../assets/icons/close_icon.svg" alt="" (click)="close()" />
+<mat-card class="dashboard-card m-3 mat-elevation-z8">
+  <img
+    class="close-icon"
+    src="../../../assets/icons/close_icon.svg"
+    alt=""
+    (click)="close()"
+  />
   <mat-card-header> </mat-card-header>
   <mat-card-content class="dashboard-card-content">
-    <form class="container" (ngSubmit)="submit(form)" #form="ngForm" [formGroup]="createCustomerFormGroup">
+    <form
+      class="container"
+      (ngSubmit)="submit(form)"
+      #form="ngForm"
+      [formGroup]="createCustomerFormGroup"
+    >
       <div class="row">
         <div class="col d-flex align-items-center">
           <h3>Nieuwe klant</h3>
@@ -24,14 +34,26 @@
               name="name"
               [formControl]="createCustomerFormGroup?.controls['name']"
               required
-              [class.valid]="createCustomerFormGroup.controls['name'].invalid && (createCustomerFormGroup.controls['name'].dirty || createCustomerFormGroup.controls['name'].touched)"
+              [class.valid]="
+                createCustomerFormGroup.controls['name'].invalid &&
+                (createCustomerFormGroup.controls['name'].dirty ||
+                  createCustomerFormGroup.controls['name'].touched)
+              "
             />
-            <div *ngIf="createCustomerFormGroup.controls['name'].invalid && (createCustomerFormGroup.controls['name'].dirty || createCustomerFormGroup.controls['name'].touched)" class="text-danger">
-              <div *ngIf="createCustomerFormGroup.controls['name'].errors.required">
-              This field is required
+            <div
+              *ngIf="
+                createCustomerFormGroup.controls['name'].invalid &&
+                (createCustomerFormGroup.controls['name'].dirty ||
+                  createCustomerFormGroup.controls['name'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="createCustomerFormGroup.controls['name'].errors.required"
+              >
+                This field is required
+              </div>
             </div>
-          </div>
-
           </div>
           <!-- address -->
           <div class="row my-3">
@@ -46,13 +68,29 @@
               name="firstAddress"
               required
               [formControl]="createCustomerFormGroup?.controls['firstAddress']"
-              [class.valid]="createCustomerFormGroup.controls['firstAddress'].invalid && (createCustomerFormGroup.controls['firstAddress'].dirty || createCustomerFormGroup.controls['firstAddress'].touched)"
+              [class.valid]="
+                createCustomerFormGroup.controls['firstAddress'].invalid &&
+                (createCustomerFormGroup.controls['firstAddress'].dirty ||
+                  createCustomerFormGroup.controls['firstAddress'].touched)
+              "
             />
-            <div *ngIf="createCustomerFormGroup.controls['firstAddress'].invalid && (createCustomerFormGroup.controls['firstAddress'].dirty || createCustomerFormGroup.controls['firstAddress'].touched)" class="text-danger">
-              <div *ngIf="createCustomerFormGroup.controls['firstAddress'].errors.required">
-              This field is required
+            <div
+              *ngIf="
+                createCustomerFormGroup.controls['firstAddress'].invalid &&
+                (createCustomerFormGroup.controls['firstAddress'].dirty ||
+                  createCustomerFormGroup.controls['firstAddress'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="
+                  createCustomerFormGroup.controls['firstAddress'].errors
+                    .required
+                "
+              >
+                This field is required
+              </div>
             </div>
-          </div>
           </div>
           <div class="row my-3">
             <div class="input-icon"></div>
@@ -62,13 +100,29 @@
               name="secondAddress"
               required
               [formControl]="createCustomerFormGroup?.controls['secondAddress']"
-              [class.valid]="createCustomerFormGroup.controls['secondAddress'].invalid && (createCustomerFormGroup.controls['secondAddress'].dirty || createCustomerFormGroup.controls['secondAddress'].touched)"
+              [class.valid]="
+                createCustomerFormGroup.controls['secondAddress'].invalid &&
+                (createCustomerFormGroup.controls['secondAddress'].dirty ||
+                  createCustomerFormGroup.controls['secondAddress'].touched)
+              "
             />
-            <div *ngIf="createCustomerFormGroup.controls['secondAddress'].invalid && (createCustomerFormGroup.controls['secondAddress'].dirty || createCustomerFormGroup.controls['secondAddress'].touched)" class="text-danger">
-              <div *ngIf="createCustomerFormGroup.controls['secondAddress'].errors.required">
-              This field is required
+            <div
+              *ngIf="
+                createCustomerFormGroup.controls['secondAddress'].invalid &&
+                (createCustomerFormGroup.controls['secondAddress'].dirty ||
+                  createCustomerFormGroup.controls['secondAddress'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="
+                  createCustomerFormGroup.controls['secondAddress'].errors
+                    .required
+                "
+              >
+                This field is required
+              </div>
             </div>
-          </div>
           </div>
           <div class="row my-3 mb-5">
             <div class="input-icon"></div>
@@ -78,13 +132,28 @@
               name="postCode"
               required
               [formControl]="createCustomerFormGroup?.controls['postCode']"
-              [class.valid]="createCustomerFormGroup.controls['postCode'].invalid && (createCustomerFormGroup.controls['postCode'].dirty || createCustomerFormGroup.controls['postCode'].touched)"
+              [class.valid]="
+                createCustomerFormGroup.controls['postCode'].invalid &&
+                (createCustomerFormGroup.controls['postCode'].dirty ||
+                  createCustomerFormGroup.controls['postCode'].touched)
+              "
             />
-            <div *ngIf="createCustomerFormGroup.controls['postCode'].invalid && (createCustomerFormGroup.controls['postCode'].dirty || createCustomerFormGroup.controls['postCode'].touched)" class="text-danger">
-              <div *ngIf="createCustomerFormGroup.controls['postCode'].errors.required">
-              This field is required
+            <div
+              *ngIf="
+                createCustomerFormGroup.controls['postCode'].invalid &&
+                (createCustomerFormGroup.controls['postCode'].dirty ||
+                  createCustomerFormGroup.controls['postCode'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="
+                  createCustomerFormGroup.controls['postCode'].errors.required
+                "
+              >
+                This field is required
+              </div>
             </div>
-          </div>
           </div>
           <!-- contacts -->
           <div class="row my-3">
@@ -113,13 +182,28 @@
               required
               type="email"
               [formControl]="createCustomerFormGroup?.controls['email']"
-              [class.valid]="createCustomerFormGroup.controls['email'].invalid && (createCustomerFormGroup.controls['email'].dirty || createCustomerFormGroup.controls['email'].touched)"
+              [class.valid]="
+                createCustomerFormGroup.controls['email'].invalid &&
+                (createCustomerFormGroup.controls['email'].dirty ||
+                  createCustomerFormGroup.controls['email'].touched)
+              "
             />
-            <div *ngIf="createCustomerFormGroup.controls['email'].invalid && (createCustomerFormGroup.controls['email'].dirty || createCustomerFormGroup.controls['email'].touched)" class="text-danger">
-              <div *ngIf="createCustomerFormGroup.controls['email'].errors.required">
-              This field is required
+            <div
+              *ngIf="
+                createCustomerFormGroup.controls['email'].invalid &&
+                (createCustomerFormGroup.controls['email'].dirty ||
+                  createCustomerFormGroup.controls['email'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="
+                  createCustomerFormGroup.controls['email'].errors.required
+                "
+              >
+                This field is required
+              </div>
             </div>
-          </div>
           </div>
         </div>
         <div class="col-4 container">
@@ -134,35 +218,187 @@
             <div class="col-9 container-fluid">
               <div class="row my-3 d-flex align-items-center">
                 <span class="col-2">Ma</span>
-                <input class="form-input col-8" placeholder="Openingsuren" />
+                <input
+                  class="form-input col-8"
+                  placeholder="Openingsuren"
+                  type="time"
+                  [formControl]="createCustomerFormGroup?.controls['mon']"
+                />
+                <div
+                  *ngIf="
+                    createCustomerFormGroup.controls['mon'].invalid &&
+                    (createCustomerFormGroup.controls['mon'].dirty ||
+                      createCustomerFormGroup.controls['mon'].touched)
+                  "
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      createCustomerFormGroup.controls['mon'].errors.required
+                    "
+                  >
+                    This field is required
+                  </div>
+                </div>
               </div>
               <div class="row my-3 d-flex align-items-center">
                 <span class="col-2">Di</span>
-                <input class="form-input col-8" placeholder="Openingsuren" />
+                <input
+                  class="form-input col-8"
+                  placeholder="Openingsuren"
+                  type="time"
+                  [formControl]="createCustomerFormGroup?.controls['tue']"
+                />
+                <div
+                  *ngIf="
+                    createCustomerFormGroup.controls['tue'].invalid &&
+                    (createCustomerFormGroup.controls['tue'].dirty ||
+                      createCustomerFormGroup.controls['tue'].touched)
+                  "
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      createCustomerFormGroup.controls['tue'].errors.required
+                    "
+                  >
+                    This field is required
+                  </div>
+                </div>
               </div>
               <div class="row my-3 d-flex align-items-center">
                 <span class="col-2">Wo</span>
-                <input class="form-input col-8" placeholder="Openingsuren" />
+                <input
+                  class="form-input col-8"
+                  placeholder="Openingsuren"
+                  type="time"
+                  [formControl]="createCustomerFormGroup?.controls['wed']"
+                />
+                <div
+                  *ngIf="
+                    createCustomerFormGroup.controls['wed'].invalid &&
+                    (createCustomerFormGroup.controls['wed'].dirty ||
+                      createCustomerFormGroup.controls['wed'].touched)
+                  "
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      createCustomerFormGroup.controls['wed'].errors.required
+                    "
+                  >
+                    This field is required
+                  </div>
+                </div>
               </div>
               <div class="row my-3 d-flex align-items-center">
                 <span class="col-2">Do</span>
-                <input class="form-input col-8" placeholder="Openingsuren" />
+                <input
+                  class="form-input col-8"
+                  placeholder="Openingsuren"
+                  type="time"
+                  [formControl]="createCustomerFormGroup?.controls['thur']"
+                />
+                <div
+                  *ngIf="
+                    createCustomerFormGroup.controls['thur'].invalid &&
+                    (createCustomerFormGroup.controls['thur'].dirty ||
+                      createCustomerFormGroup.controls['thur'].touched)
+                  "
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      createCustomerFormGroup.controls['thur'].errors.required
+                    "
+                  >
+                    This field is required
+                  </div>
+                </div>
               </div>
               <div class="row my-3 d-flex align-items-center">
                 <span class="col-2">Vrij</span>
-                <input class="form-input col-8" placeholder="Openingsuren" />
+                <input
+                  class="form-input col-8"
+                  placeholder="Openingsuren"
+                  type="time"
+                  [formControl]="createCustomerFormGroup?.controls['fri']"
+                />
+                <div
+                  *ngIf="
+                    createCustomerFormGroup.controls['fri'].invalid &&
+                    (createCustomerFormGroup.controls['fri'].dirty ||
+                      createCustomerFormGroup.controls['fri'].touched)
+                  "
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      createCustomerFormGroup.controls['fri'].errors.required
+                    "
+                  >
+                    This field is required
+                  </div>
+                </div>
               </div>
               <div class="row my-3 d-flex align-items-center">
                 <span class="col-2">Za</span>
-                <input class="form-input col-8" placeholder="Openingsuren" />
+                <input
+                  class="form-input col-8"
+                  placeholder="Openingsuren"
+                  type="time"
+                  [formControl]="createCustomerFormGroup?.controls['sat']"
+                />
+                <div
+                  *ngIf="
+                    createCustomerFormGroup.controls['sat'].invalid &&
+                    (createCustomerFormGroup.controls['sat'].dirty ||
+                      createCustomerFormGroup.controls['sat'].touched)
+                  "
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      createCustomerFormGroup.controls['sat'].errors.required
+                    "
+                  >
+                    This field is required
+                  </div>
+                </div>
               </div>
               <div class="row my-3 d-flex align-items-center">
                 <span class="col-2">Zo</span>
-                <input class="form-input col-8" placeholder="Openingsuren" />
+                <input
+                  class="form-input col-8"
+                  placeholder="Openingsuren"
+                  type="time"
+                  [formControl]="createCustomerFormGroup?.controls['sun']"
+                />
+                <div
+                  *ngIf="
+                    createCustomerFormGroup.controls['sun'].invalid &&
+                    (createCustomerFormGroup.controls['sun'].dirty ||
+                      createCustomerFormGroup.controls['sun'].touched)
+                  "
+                  class="text-danger"
+                >
+                  <div
+                    *ngIf="
+                      createCustomerFormGroup.controls['sun'].errors.required
+                    "
+                  >
+                    This field is required
+                  </div>
+                </div>
               </div>
               <div class="row my-3 d-flex align-items-center">
                 <span class="col-2"></span>
-                <button type="submit" class="col-8 mx-3" color="primary" mat-stroked-button >
+                <button
+                  type="submit"
+                  class="col-8 mx-3"
+                  color="primary"
+                  mat-stroked-button
+                >
                   VOEG TOE
                 </button>
               </div>

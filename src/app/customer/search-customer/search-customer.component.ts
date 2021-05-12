@@ -2,6 +2,7 @@ import { CustomerStateService } from '../customer-state.service';
 import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { SubSink } from 'subsink';
 
 @Component({
   selector: 'app-search-customer',
@@ -13,16 +14,20 @@ export class SearchCustomerComponent implements OnInit {
   searchData = '';
   customers: any[] = [];
   filteredCustomers: any[] = [];
+  private subs = new SubSink();
   constructor(
     private router: Router,
     public customerStateService: CustomerStateService
   ) {}
 
   ngOnInit(): void {
-    this.customerStateService.allCustomers$.subscribe((res) => {
-      this.customers = res;
-      this.filteredCustomers = [...this.customers];
-    });
+    this.subs.sink = this.customerStateService.allCustomers$.subscribe(
+      (res) => {
+        this.customers = res;
+        this.filteredCustomers = [...this.customers];
+        console.log(res);
+      }
+    );
   }
 
   submit() {
@@ -48,7 +53,10 @@ export class SearchCustomerComponent implements OnInit {
     }
   }
 
-  viewDetails(){
-    this.router.navigate(['view-details'])
+  viewDetails() {
+    this.router.navigate(['view-details']);
+  }
+  ngOnDestroy() {
+    this.subs.unsubscribe();
   }
 }
