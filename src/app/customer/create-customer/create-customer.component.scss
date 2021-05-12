@@ -1,0 +1,23 @@
+@import "../../../sass-helpers/colors.scss";
+.form-input {
+  border: none;
+  background: #cccccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 20px;
+  &:focus {
+    outline: 0 none;
+  }
+}
+
+.input-icon {
+  width: 45px;
+  margin: 10px 0;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

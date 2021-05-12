@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,12 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class SearchCustomerComponent implements OnInit {
   searchContral =  new FormControl('');
   searchData =  "";
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   submit(){
     console.log(this.searchData)
+    this.router.navigate(["create-customer"])
   }
 }

@@ -1,0 +1,139 @@
+<mat-card class="dashboard-card h-75 m-3 mat-elevation-z8">
+  <img class="close-icon" src="../../../assets/icons/close_icon.svg" alt="" (click)="close()" />
+  <mat-card-header> </mat-card-header>
+  <mat-card-content class="dashboard-card-content">
+    <form class="container" (ngSubmit)="submit(form)" #form="ngForm">
+      <div class="row">
+        <div class="col d-flex align-items-center">
+          <h3>Nieuwe klant</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-6 container">
+          <!-- name -->
+          <div class="row mb-5">
+            <img
+              class="input-icon"
+              src="../../../assets/icons/person_black_24dp.svg"
+              alt=""
+            />
+            <input
+              class="form-input col-9"
+              placeholder="Naam"
+              name="name"
+              [(ngModel)]="customer.name"
+              required
+            />
+          </div>
+          <!-- address -->
+          <div class="row my-3">
+            <img
+              class="input-icon"
+              src="../../../assets/icons/location_icon.svg"
+              alt=""
+            />
+            <input
+              class="form-input col-9"
+              placeholder="Adreslijin1"
+              name="firstAddress"
+              [(ngModel)]="customer.firstAddress"
+            />
+          </div>
+          <div class="row my-3">
+            <div class="input-icon"></div>
+            <input
+              class="form-input col-9"
+              placeholder="Adreslijin1"
+              name="secondAddress"
+              [(ngModel)]="customer.secondAddress"
+            />
+          </div>
+          <div class="row my-3 mb-5">
+            <div class="input-icon"></div>
+            <input
+              class="form-input col-9"
+              placeholder="Postcode - Gemeente"
+              name="ppstCode"
+              [(ngModel)]="customer.ppstCode"
+            />
+          </div>
+          <!-- contacts -->
+          <div class="row my-3">
+            <img
+              class="input-icon"
+              src="../../../assets/icons/telephone_icon.svg"
+              alt=""
+            />
+            <input
+              class="form-input col-9"
+              placeholder="Tel"
+              name="phoneNumber"
+              [(ngModel)]="customer.phoneNumber"
+            />
+          </div>
+          <div class="row my-3">
+            <img
+              class="input-icon"
+              src="../../../assets/icons/email_icon.svg"
+              alt=""
+            />
+            <input
+              class="form-input col-9"
+              placeholder="Email"
+              name="email"
+              [(ngModel)]="customer.email"
+            />
+          </div>
+        </div>
+        <div class="col-4 container">
+          <div class="row my-3">
+            <div class="col-3">
+              <img
+                class="input-icon"
+                src="../../../assets/icons/schedule-24px.svg"
+                alt=""
+              />
+            </div>
+            <div class="col-9 container-fluid">
+              <div class="row my-3 d-flex align-items-center">
+                <span class="col-2">Ma</span>
+                <input class="form-input col-8" placeholder="Openingsuren" />
+              </div>
+              <div class="row my-3 d-flex align-items-center">
+                <span class="col-2">Di</span>
+                <input class="form-input col-8" placeholder="Openingsuren" />
+              </div>
+              <div class="row my-3 d-flex align-items-center">
+                <span class="col-2">Wo</span>
+                <input class="form-input col-8" placeholder="Openingsuren" />
+              </div>
+              <div class="row my-3 d-flex align-items-center">
+                <span class="col-2">Do</span>
+                <input class="form-input col-8" placeholder="Openingsuren" />
+              </div>
+              <div class="row my-3 d-flex align-items-center">
+                <span class="col-2">Vrij</span>
+                <input class="form-input col-8" placeholder="Openingsuren" />
+              </div>
+              <div class="row my-3 d-flex align-items-center">
+                <span class="col-2">Za</span>
+                <input class="form-input col-8" placeholder="Openingsuren" />
+              </div>
+              <div class="row my-3 d-flex align-items-center">
+                <span class="col-2">Zo</span>
+                <input class="form-input col-8" placeholder="Openingsuren" />
+              </div>
+              <div class="row my-3 d-flex align-items-center">
+                <span class="col-2"></span>
+                <button type="submit" class="col-8 mx-3" mat-stroked-button>
+                  VOEG TOE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

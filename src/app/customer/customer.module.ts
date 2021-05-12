@@ -10,10 +10,13 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    SearchCustomerComponent
+    SearchCustomerComponent,
+    CreateCustomerComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +27,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatCardModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ]
 })
 export class CustomerModule { }
