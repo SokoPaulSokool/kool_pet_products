@@ -1,3 +1,4 @@
+import { CustomerStateService } from '../customer-state.service';
 import { Router } from '@angular/router';
 import { Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
@@ -19,7 +20,11 @@ export class CreateCustomerComponent implements OnInit {
     phoneNumber: '',
     email: '',
   };
-  constructor(private _formBuilder: FormBuilder, private router: Router) {
+  constructor(
+    private _formBuilder: FormBuilder,
+    private router: Router,
+    private customerStateService: CustomerStateService
+  ) {
     this.createCustomerFormGroup = this._formBuilder.group({
       name: ['', Validators.required],
       firstAddress: ['', Validators.required],
@@ -33,10 +38,10 @@ export class CreateCustomerComponent implements OnInit {
   ngOnInit(): void {}
 
   submit(form: any) {
-    console.log(form);
-    console.log(this.customer);
+    this.customerStateService.addCustomer(this.customer);
+    this.close();
   }
   close() {
-   this.router.navigate([''])
+    this.router.navigate(['']);
   }
 }
