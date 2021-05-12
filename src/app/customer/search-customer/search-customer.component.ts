@@ -11,17 +11,40 @@ import { Component, OnInit } from '@angular/core';
 export class SearchCustomerComponent implements OnInit {
   searchContral = new FormControl('');
   searchData = '';
+  customers: any[] = [];
+  filteredCustomers: any[] = [];
   constructor(
     private router: Router,
-    private customerStateService: CustomerStateService
+    public customerStateService: CustomerStateService
   ) {}
 
   ngOnInit(): void {
-    this.customerStateService.allCustomers$.subscribe((ll) => {});
+    this.customerStateService.allCustomers$.subscribe((res) => {
+      this.customers = res;
+      this.filteredCustomers = [...this.customers];
+    });
   }
 
   submit() {
-    console.log(this.searchData);
     this.router.navigate(['create-customer']);
+  }
+
+  search() {
+    if (this.searchData) {
+      const filtered = this.customers.filter((customer) => {
+        if (
+          customer &&
+          customer.name &&
+          customer.name.toLowerCase().includes(this.searchData.toLowerCase())
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      this.filteredCustomers = [...filtered];
+    } else {
+      this.filteredCustomers = [...this.customers];
+    }
   }
 }

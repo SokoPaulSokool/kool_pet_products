@@ -1,18 +1,35 @@
 <div class="d-flex justify-content-center w-100 h-100">
   <div class="search-item">
-    <div class="row">
-      <div class="col">
-        <input
+    <div class="row w-100 p-0 m-0 ">
+      <div class="col p-0 m-0 ">
+        <div class="d-flex flex-nowrap justify-content-between">
+          <input
           class="search-input"
           [(ngModel)]="searchData"
           placeholder="Search"
           type="text"
+          (keyup)="search()"
         />
 
         <button mat-fab class="bg-light-green" (click)="submit()">
           <mat-icon>add</mat-icon>
         </button>
-        <p>{{ searchData }}</p>
+        </div>
+
+        <div class="searched-customers">
+          <div class="customer-details" *ngFor="let customer of filteredCustomers">
+            <div class="d-flex flex-column">
+              <h4>{{ customer?.name }}</h4>
+              <p>{{ customer?.firstAddress }}</p>
+            </div>
+
+            <img
+            class="input-icon"
+            src="../../../assets/icons/location_group.svg"
+            alt=""
+          />
+          </div>
+        </div>
       </div>
     </div>
   </div>

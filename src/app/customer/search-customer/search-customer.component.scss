@@ -1,13 +1,22 @@
 @import "../../../sass-helpers/colors.scss";
-.search-item{
-  margin-top: 200px;
-  .search-input{
+.search-item {
+  margin-top: 150px;
+  width: 40%;
+  .search-input {
     border: 2px solid $light-green;
     padding: 10px;
     border-radius: 10px;
-    margin: 0 20px;
-    &:focus{
+    margin-right: 20px;
+    width: 100%;
+    &:focus {
       outline: 0 none;
     }
   }
+}
+
+.customer-details{
+  display: flex;
+  padding: 15px 0;
+  width: 100%;
+  justify-content: space-between;
 }
