@@ -29,17 +29,20 @@ export class CreateCustomerComponent implements OnInit {
       name: ['', Validators.required],
       firstAddress: ['', Validators.required],
       secondAddress: ['', Validators.required],
-      ppstCode: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
-      email: ['', Validators.required],
+      postCode: ['', Validators.required],
+      phoneNumber: [''],
+      email: [, [Validators.required, Validators.pattern('[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}')]],
     });
   }
 
   ngOnInit(): void {}
 
   submit(form: any) {
-    this.customerStateService.addCustomer(this.customer);
-    this.close();
+    if(this.createCustomerFormGroup.valid){
+
+      this.customerStateService.addCustomer(this.createCustomerFormGroup.value);
+      this.close();
+    }
   }
   close() {
     this.router.navigate(['']);

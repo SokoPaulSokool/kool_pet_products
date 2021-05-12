@@ -2,7 +2,7 @@
   <img class="close-icon" src="../../../assets/icons/close_icon.svg" alt="" (click)="close()" />
   <mat-card-header> </mat-card-header>
   <mat-card-content class="dashboard-card-content">
-    <form class="container" (ngSubmit)="submit(form)" #form="ngForm">
+    <form class="container" (ngSubmit)="submit(form)" #form="ngForm" [formGroup]="createCustomerFormGroup">
       <div class="row">
         <div class="col d-flex align-items-center">
           <h3>Nieuwe klant</h3>
@@ -22,9 +22,15 @@
               class="form-input col-9"
               placeholder="Naam"
               name="name"
-              [(ngModel)]="customer.name"
+              [formControl]="createCustomerFormGroup?.controls['name']"
               required
             />
+            <div *ngIf="createCustomerFormGroup.controls['name'].invalid && (createCustomerFormGroup.controls['name'].dirty || createCustomerFormGroup.controls['name'].touched)" class="text-danger">
+              <div *ngIf="createCustomerFormGroup.controls['name'].errors.required">
+              This field is required
+            </div>
+          </div>
+
           </div>
           <!-- address -->
           <div class="row my-3">
@@ -37,8 +43,14 @@
               class="form-input col-9"
               placeholder="Adreslijin1"
               name="firstAddress"
-              [(ngModel)]="customer.firstAddress"
+              required
+              [formControl]="createCustomerFormGroup?.controls['firstAddress']"
             />
+            <div *ngIf="createCustomerFormGroup.controls['firstAddress'].invalid && (createCustomerFormGroup.controls['firstAddress'].dirty || createCustomerFormGroup.controls['firstAddress'].touched)" class="text-danger">
+              <div *ngIf="createCustomerFormGroup.controls['firstAddress'].errors.required">
+              This field is required
+            </div>
+          </div>
           </div>
           <div class="row my-3">
             <div class="input-icon"></div>
@@ -46,17 +58,29 @@
               class="form-input col-9"
               placeholder="Adreslijin1"
               name="secondAddress"
-              [(ngModel)]="customer.secondAddress"
+              required
+              [formControl]="createCustomerFormGroup?.controls['secondAddress']"
             />
+            <div *ngIf="createCustomerFormGroup.controls['secondAddress'].invalid && (createCustomerFormGroup.controls['secondAddress'].dirty || createCustomerFormGroup.controls['secondAddress'].touched)" class="text-danger">
+              <div *ngIf="createCustomerFormGroup.controls['secondAddress'].errors.required">
+              This field is required
+            </div>
+          </div>
           </div>
           <div class="row my-3 mb-5">
             <div class="input-icon"></div>
             <input
               class="form-input col-9"
               placeholder="Postcode - Gemeente"
-              name="ppstCode"
-              [(ngModel)]="customer.ppstCode"
+              name="postCode"
+              required
+              [formControl]="createCustomerFormGroup?.controls['postCode']"
             />
+            <div *ngIf="createCustomerFormGroup.controls['postCode'].invalid && (createCustomerFormGroup.controls['postCode'].dirty || createCustomerFormGroup.controls['postCode'].touched)" class="text-danger">
+              <div *ngIf="createCustomerFormGroup.controls['postCode'].errors.required">
+              This field is required
+            </div>
+          </div>
           </div>
           <!-- contacts -->
           <div class="row my-3">
@@ -69,7 +93,7 @@
               class="form-input col-9"
               placeholder="Tel"
               name="phoneNumber"
-              [(ngModel)]="customer.phoneNumber"
+              [formControl]="createCustomerFormGroup?.controls['phoneNumber']"
             />
           </div>
           <div class="row my-3">
@@ -82,8 +106,15 @@
               class="form-input col-9"
               placeholder="Email"
               name="email"
-              [(ngModel)]="customer.email"
+              required
+              type="email"
+              [formControl]="createCustomerFormGroup?.controls['email']"
             />
+            <div *ngIf="createCustomerFormGroup.controls['email'].invalid && (createCustomerFormGroup.controls['email'].dirty || createCustomerFormGroup.controls['email'].touched)" class="text-danger">
+              <div *ngIf="createCustomerFormGroup.controls['email'].errors.required">
+              This field is required
+            </div>
+          </div>
           </div>
         </div>
         <div class="col-4 container">
@@ -126,7 +157,7 @@
               </div>
               <div class="row my-3 d-flex align-items-center">
                 <span class="col-2"></span>
-                <button type="submit" class="col-8 mx-3" mat-stroked-button>
+                <button type="submit" class="col-8 mx-3" color="primary" mat-stroked-button >
                   VOEG TOE
                 </button>
               </div>
