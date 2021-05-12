@@ -1,0 +1,34 @@
+.customer-details {
+  height: 90vh;
+  width: 100%;
+  background: #10b4a7;
+  .bottom-details {
+    position: absolute;
+    bottom: 0;
+    height: 30vh;
+    width: 100%;
+    background: white;
+    box-shadow: 9px 4px 15px -8px #000000;
+  }
+  .verticle-details{
+    position: absolute;
+    margin-left: 20px;
+    width: 25vw;
+    height: 90%;
+    z-index: 100;
+
+    &__top{
+      height: 55%;
+      width: 100%;
+      margin-bottom: 30px;
+      background: white;
+      box-shadow: 9px 4px 15px -8px #000000;
+    }&__bottom{
+      height: 40%;
+      width: 100%;
+      margin-top: 30px;
+      background: white;
+      box-shadow: 9px 4px 15px -8px #000000;
+    }
+  }
+}
