@@ -12,11 +12,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
 import { FormsModule } from '@angular/forms';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 
 @NgModule({
   declarations: [
     SearchCustomerComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    ViewDetailsComponent
   ],
   imports: [
     CommonModule,

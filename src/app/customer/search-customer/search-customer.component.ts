@@ -47,4 +47,8 @@ export class SearchCustomerComponent implements OnInit {
       this.filteredCustomers = [...this.customers];
     }
   }
+
+  viewDetails(){
+    this.router.navigate(['view-details'])
+  }
 }
