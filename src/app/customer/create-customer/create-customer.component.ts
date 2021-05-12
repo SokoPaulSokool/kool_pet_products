@@ -22,8 +22,8 @@ export class CreateCustomerComponent implements OnInit {
   };
   constructor(
     private _formBuilder: FormBuilder,
-    private router: Router,
-    private customerStateService: CustomerStateService
+    public router: Router,
+    public customerStateService: CustomerStateService
   ) {
     this.createCustomerFormGroup = this._formBuilder.group({
       name: ['', [Validators.required]],

@@ -16,7 +16,7 @@ export class SearchCustomerComponent implements OnInit {
   filteredCustomers: any[] = [];
   private subs = new SubSink();
   constructor(
-    private router: Router,
+    public router: Router,
     public customerStateService: CustomerStateService
   ) {}
 
@@ -30,7 +30,7 @@ export class SearchCustomerComponent implements OnInit {
     );
   }
 
-  submit() {
+  createNewCustomer() {
     this.router.navigate(['create-customer']);
   }
 

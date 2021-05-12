@@ -1,6 +1,13 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { NavigationComponent } from './navigation/navigation.component';
+
+@Component({
+  selector: 'app-navigation'
+})
+class MockNavigationComponent {}
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +16,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MockNavigationComponent
       ],
     }).compileComponents();
   });
@@ -26,10 +34,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('koolPetProducts');
   });
 
-  it('should render title', () => {
+  it('should render app navigation component', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('koolPetProducts app is running!');
+    const navigation = compiled.querySelector('app-navigation');
+    expect(navigation).toBeTruthy();
   });
 });
