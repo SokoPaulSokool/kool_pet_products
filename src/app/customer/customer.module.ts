@@ -13,12 +13,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
 import { FormsModule } from '@angular/forms';
 import { ViewDetailsComponent } from './view-details/view-details.component';
-
+import { NgxMaskModule } from 'ngx-mask';
 @NgModule({
   declarations: [
     SearchCustomerComponent,
     CreateCustomerComponent,
-    ViewDetailsComponent
+    ViewDetailsComponent,
   ],
   imports: [
     CommonModule,
@@ -30,7 +30,8 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
-  ]
+    FormsModule,
+    NgxMaskModule.forRoot(),
+  ],
 })
-export class CustomerModule { }
+export class CustomerModule {}
