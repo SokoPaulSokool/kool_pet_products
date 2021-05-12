@@ -1,0 +1,76 @@
+@import "../../../sass-helpers/colors.scss";
+.item {
+  width: 100%;
+  min-height: 300px;
+  margin: 10px 5px;
+  border: 2px solid #66cccc;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.solid-circles {
+  position: absolute;
+  top: -17px;
+  display: flex;
+  left: 8px;
+}
+.solid-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: $light-green;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.circle-1 {
+  background: #cc9966;
+}
+.circle-2 {
+  background: #66cccc;
+}
+.circle-3 {
+  background: #336633;
+}
+
+.price {
+  width: 90px;
+  height: 35px;
+  z-index: 2;
+  border: 1px solid #66cccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  border-radius: 10px;
+}
+
+.item-icon {
+  width: 100%;
+}
+
+.actions-circles {
+  border: 3px solid #66cccc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+}
+
+.circle-subtract {
+  display: flex;
+  left: 10px;
+}
+.circle-add {
+  display: flex;
+  right: 10px;
+}

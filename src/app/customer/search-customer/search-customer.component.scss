@@ -2,16 +2,23 @@
 .search-item {
   margin-top: 150px;
   width: 40%;
+  height: 70vh;
+  overflow-y: auto;
   .search-input {
     border: 2px solid $light-green;
     padding: 10px;
     border-radius: 10px;
     margin-right: 20px;
     width: 100%;
+
     &:focus {
       outline: 0 none;
     }
   }
+}
+.search{
+  position: sticky;
+  top: 0;
 }
 
 .customer-details{

@@ -24,6 +24,7 @@
               name="name"
               [formControl]="createCustomerFormGroup?.controls['name']"
               required
+              [class.valid]="createCustomerFormGroup.controls['name'].invalid && (createCustomerFormGroup.controls['name'].dirty || createCustomerFormGroup.controls['name'].touched)"
             />
             <div *ngIf="createCustomerFormGroup.controls['name'].invalid && (createCustomerFormGroup.controls['name'].dirty || createCustomerFormGroup.controls['name'].touched)" class="text-danger">
               <div *ngIf="createCustomerFormGroup.controls['name'].errors.required">
@@ -45,6 +46,7 @@
               name="firstAddress"
               required
               [formControl]="createCustomerFormGroup?.controls['firstAddress']"
+              [class.valid]="createCustomerFormGroup.controls['firstAddress'].invalid && (createCustomerFormGroup.controls['firstAddress'].dirty || createCustomerFormGroup.controls['firstAddress'].touched)"
             />
             <div *ngIf="createCustomerFormGroup.controls['firstAddress'].invalid && (createCustomerFormGroup.controls['firstAddress'].dirty || createCustomerFormGroup.controls['firstAddress'].touched)" class="text-danger">
               <div *ngIf="createCustomerFormGroup.controls['firstAddress'].errors.required">
@@ -60,6 +62,7 @@
               name="secondAddress"
               required
               [formControl]="createCustomerFormGroup?.controls['secondAddress']"
+              [class.valid]="createCustomerFormGroup.controls['secondAddress'].invalid && (createCustomerFormGroup.controls['secondAddress'].dirty || createCustomerFormGroup.controls['secondAddress'].touched)"
             />
             <div *ngIf="createCustomerFormGroup.controls['secondAddress'].invalid && (createCustomerFormGroup.controls['secondAddress'].dirty || createCustomerFormGroup.controls['secondAddress'].touched)" class="text-danger">
               <div *ngIf="createCustomerFormGroup.controls['secondAddress'].errors.required">
@@ -75,6 +78,7 @@
               name="postCode"
               required
               [formControl]="createCustomerFormGroup?.controls['postCode']"
+              [class.valid]="createCustomerFormGroup.controls['postCode'].invalid && (createCustomerFormGroup.controls['postCode'].dirty || createCustomerFormGroup.controls['postCode'].touched)"
             />
             <div *ngIf="createCustomerFormGroup.controls['postCode'].invalid && (createCustomerFormGroup.controls['postCode'].dirty || createCustomerFormGroup.controls['postCode'].touched)" class="text-danger">
               <div *ngIf="createCustomerFormGroup.controls['postCode'].errors.required">
@@ -109,6 +113,7 @@
               required
               type="email"
               [formControl]="createCustomerFormGroup?.controls['email']"
+              [class.valid]="createCustomerFormGroup.controls['email'].invalid && (createCustomerFormGroup.controls['email'].dirty || createCustomerFormGroup.controls['email'].touched)"
             />
             <div *ngIf="createCustomerFormGroup.controls['email'].invalid && (createCustomerFormGroup.controls['email'].dirty || createCustomerFormGroup.controls['email'].touched)" class="text-danger">
               <div *ngIf="createCustomerFormGroup.controls['email'].errors.required">

@@ -26,12 +26,12 @@ export class CreateCustomerComponent implements OnInit {
     private customerStateService: CustomerStateService
   ) {
     this.createCustomerFormGroup = this._formBuilder.group({
-      name: ['', Validators.required],
-      firstAddress: ['', Validators.required],
-      secondAddress: ['', Validators.required],
-      postCode: ['', Validators.required],
+      name: ['', [Validators.required]],
+      firstAddress: ['', [Validators.required]],
+      secondAddress: ['', [Validators.required]],
+      postCode: ['', [Validators.required]],
       phoneNumber: [''],
-      email: [, [Validators.required, Validators.pattern('[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}')]],
+      email: ["", [Validators.required, Validators.pattern('[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}')]],
     });
   }
 

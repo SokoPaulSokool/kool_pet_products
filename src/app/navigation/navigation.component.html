@@ -10,27 +10,29 @@
     <!-- <mat-toolbar class="p-0 back-green">
 
     </mat-toolbar> -->
-    <div class="logo">
+    <div class="logo" (click)="navigate('')" >
       <img
         class="logo-btn back-green"
         src="../../assets/icons/logo.svg"
         alt=""
       />
+      <div class="white-circle">Tom & Co</div>
     </div>
-    <div class="d-flex flex-column align-items-center">
-      <div class="menu-item" mat-list-item href="#">
+
+    <div class="d-flex flex-column align-items-center mt-5">
+      <div class="menu-item" mat-list-item (click)="navigate('')" >
         <img src="../../assets/icons/icon_klantenkopie.svg" alt="" />
         <span>Klanten</span>
       </div>
-      <div class="menu-item" mat-list-item href="#">
+      <div class="menu-item" mat-list-item >
         <img src="../../assets/icons/icon_catalogus.svg" alt="" />
         <span>Salesbook</span>
       </div>
-      <div class="menu-item" mat-list-item href="#">
+      <div class="menu-item" mat-list-item >
         <img src="../../assets/icons/icon_bestelling.svg" alt="" />
         <span>Bestelling</span>
       </div>
-      <div class="menu-item" mat-list-item href="#">
+      <div class="menu-item" mat-list-item (click)="navigate('catalogue')">
         <img src="../../assets/icons/items_group.svg" alt="" />
         <span>Items</span>
       </div>
