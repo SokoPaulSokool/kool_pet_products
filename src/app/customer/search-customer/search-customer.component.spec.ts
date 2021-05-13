@@ -33,10 +33,10 @@ describe('SearchCustomerComponent', () => {
     expect(buttons.length).toEqual(1);
   });
 
-  it('should start with no customers', () => {
+  it('should start with five sample customers', () => {
     fixture.detectChanges();
     component.ngOnInit();
-    expect(component.customers.length).toEqual(0);
+    expect(component.customers.length).toEqual(5);
   });
 
   it('should call "createNewCustomer()" when button is clicked', () => {

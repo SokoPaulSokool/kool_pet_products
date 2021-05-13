@@ -4,6 +4,7 @@ import { Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { Customer } from '../../interfaces/all-interfaces';
 
 @Component({
   selector: 'app-create-customer',
@@ -52,7 +53,30 @@ export class CreateCustomerComponent implements OnInit {
 
   submit(form: any) {
     if (this.createCustomerFormGroup.valid) {
-      this.customerStateService.addCustomer(this.createCustomerFormGroup.value);
+      const {
+        name,
+        firstAddress,
+        secondAddress,
+        postCode,
+        phoneNumber,
+        email,
+        mon,
+        tue,
+        wed,
+        thur,
+        fri,
+        sat,
+        sun,
+      } = this.createCustomerFormGroup.value;
+      const customer: Customer = {
+        name,
+        firstAddress,
+        secondAddress,
+        postCode,
+        email,
+        openingTime: { mon, tue, wed, thur, fri, sat, sun },
+      };
+      this.customerStateService.addCustomer(customer);
       this.close();
     } else {
       this.createCustomerFormGroup.markAllAsTouched();

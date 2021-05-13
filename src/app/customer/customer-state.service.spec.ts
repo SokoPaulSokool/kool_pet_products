@@ -17,7 +17,7 @@ describe('CustomerStateService', () => {
   it('should increase number of customers when addCustomer is called', () => {
     service.addCustomer({})
     service.allCustomers$.subscribe(res=>{
-      expect(res.length).toEqual(1);
+      expect(res.length).toEqual(6);
     })
   });
 });
