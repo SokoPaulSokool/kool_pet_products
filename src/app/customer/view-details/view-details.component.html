@@ -17,7 +17,7 @@
         <h3>{{selectedCustomer?.name}}</h3>
         <p>Vert: Frank Peters</p>
       </div>
-      <div class="best-selling">
+      <div class="best-selling bg-purple">
         <p>START BESTELLING</p>
       </div>
     </div>
@@ -33,7 +33,7 @@
         <p class="p-0 text-danger m-auto">-562,10 €</p>
       </div>
       <div class="d-flex align-items-center py-3 w-100">
-        <button class="mx-2" mat-mini-fab color="primary">
+        <button class="mx-2  bg-pink " mat-mini-fab color="">
           <mat-icon class="text-white">place</mat-icon>
         </button>
         <div class="d-flex flex-column justify-self-start">
@@ -43,7 +43,7 @@
         <p class="p-0 text-danger m-auto">-562,10 €</p>
       </div>
       <div class="d-flex align-items-center py-3">
-        <button class="mx-2" mat-mini-fab color="primary">
+        <button class="mx-2 bg-orange " mat-mini-fab color="">
           <mat-icon class="text-white">place</mat-icon>
         </button>
         <div class="d-flex flex-column">
@@ -62,7 +62,7 @@
     <div class="wrapper">
       <div class="d-flex flex-column w-50">
         <div class="d-flex align-items-center py-3 w-100">
-          <button class="mx-2" mat-mini-fab color="primary">
+          <button class="mx-2 bg-pink " mat-mini-fab color="">
             <mat-icon class="text-white">place</mat-icon>
           </button>
           <div class="d-flex flex-column justify-self-start">
@@ -71,16 +71,16 @@
           </div>
         </div>
         <div class="d-flex align-items-center py-3 w-100">
-          <button class="mx-2" mat-mini-fab color="primary">
-            <mat-icon class="text-white">call</mat-icon>
+          <button class="mx-2 bg-white" mat-mini-fab color="">
+            <mat-icon class="text-black">call</mat-icon>
           </button>
           <div class="d-flex flex-column justify-self-start">
             <p class="m-0 p-0">{{selectedCustomer?.phoneNumber}}</p>
           </div>
         </div>
         <div class="d-flex align-items-center py-3 w-100">
-          <button class="mx-2" mat-mini-fab color="primary">
-            <mat-icon class="text-white">mail</mat-icon>
+          <button class="mx-2 bg-white" mat-mini-fab color="">
+            <mat-icon class="text-black">mail</mat-icon>
           </button>
           <div class="d-flex flex-column justify-self-start">
             <p class="m-0 p-0">{{selectedCustomer?.email}}</p>
@@ -88,8 +88,8 @@
         </div>
       </div>
       <div class="d-flex  py-3 w-100">
-        <button class="mx-2" mat-mini-fab color="primary">
-          <mat-icon class="text-white">mail</mat-icon>
+        <button class="mx-2 bg-white" mat-mini-fab color="">
+          <mat-icon class="text-black">schedule</mat-icon>
         </button>
         <div class="d-flex flex-column justify-self-start">
          <div *ngFor="let time of days">

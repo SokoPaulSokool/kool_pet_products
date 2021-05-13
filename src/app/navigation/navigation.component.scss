@@ -70,7 +70,7 @@
   color: $dark-green;
 }
 
-.white-circle{
+.white-circle {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -80,4 +80,57 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.toggle {
+  height: 50px;
+  width: 100px;
+  background: #66cccc;
+  color: white;
+  border-radius: 300px;
+  position: relative;
+  p {
+    position: absolute;
+    margin: 0 6px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .circle {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 2px;
+    top: 1px;
+  }
+}
+
+.tabs {
+  width: 40vw;
+  height: 50px;
+  display: flex;
+  margin-left: 150px;
+
+  .tab-item {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    border: 1px solid #000000;
+    &:last-child {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background: $light-green;
+    }
+    h3 {
+      text-align: center;
+      margin: 0;
+    }
+  }
 }

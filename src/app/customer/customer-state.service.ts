@@ -3,32 +3,32 @@ import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Customer, CustomerState } from '../interfaces/all-interfaces';
 
-const createDefaultCuatomer = (name: string, address: string) => {
+export const createDefaultCustomer = (name: string, address: string) => {
   const customer: Customer = {
     name,
     firstAddress: address,
     secondAddress: 'secondAddress',
     postCode: 'postCode',
     phoneNumber: '999888777',
-    email: name + '@gmail.com',
+    email: name.replace(" ","_") + '@gmail.com',
     openingTime: {
-      mon: '20:20',
-      tue: '20:20',
-      wed: '20:20',
-      thur: '20:20',
-      fri: '20:20',
-      sat: '20:20',
-      sun: '20:20',
+      mon: '20:23',
+      tue: '4:25',
+      wed: '10:20',
+      thur: '6:10',
+      fri: '2:20',
+      sat: '9:20',
+      sun: '2:40',
     },
   };
   return customer;
 };
 const defaultCustomers: Customer[] = [
-  createDefaultCuatomer('Tom & Co', 'De koel, Overpelt'),
-  createDefaultCuatomer('Tom & Co', 'De koel, Overpelt'),
-  createDefaultCuatomer('Maxi Zoo Mechelen', 'Oscar van Kesbeekstraat'),
-  createDefaultCuatomer('Maxi Zoo Mechelen', 'Oscar van Kesbeekstraat'),
-  createDefaultCuatomer('Maxi Zoo Mechelen', 'Oscar van Kesbeekstraat'),
+  createDefaultCustomer('Tom & Co', 'De koel, Overpelt'),
+  createDefaultCustomer('Tom & Co', 'De koel, Overpelt'),
+  createDefaultCustomer('Maxi Zoo Mechelen', 'Oscar van Kesbeekstraat'),
+  createDefaultCustomer('Maxi Zoo Mechelen', 'Oscar van Kesbeekstraat'),
+  createDefaultCustomer('Maxi Zoo Mechelen', 'Oscar van Kesbeekstraat'),
 ];
 
 const initialState: CustomerState = {

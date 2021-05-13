@@ -14,6 +14,7 @@ import { CreateCustomerComponent } from './create-customer/create-customer.compo
 import { FormsModule } from '@angular/forms';
 import { ViewDetailsComponent } from './view-details/view-details.component';
 import { NgxMaskModule } from 'ngx-mask';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     SearchCustomerComponent,
@@ -31,6 +32,7 @@ import { NgxMaskModule } from 'ngx-mask';
     MatButtonModule,
     MatIconModule,
     FormsModule,
+    MatSlideToggleModule,
     NgxMaskModule.forRoot(),
   ],
 })
