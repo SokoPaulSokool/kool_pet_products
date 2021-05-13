@@ -9,15 +9,16 @@ const createDefaultCuatomer = (name: string, address: string) => {
     firstAddress: address,
     secondAddress: 'secondAddress',
     postCode: 'postCode',
-    email: 'email',
+    phoneNumber: '999888777',
+    email: name + '@gmail.com',
     openingTime: {
-      mon: '',
-      tue: '',
-      wed: '',
-      thur: '',
-      fri: '',
-      sat: '',
-      sun: '',
+      mon: '20:20',
+      tue: '20:20',
+      wed: '20:20',
+      thur: '20:20',
+      fri: '20:20',
+      sat: '20:20',
+      sun: '20:20',
     },
   };
   return customer;
@@ -32,6 +33,7 @@ const defaultCustomers: Customer[] = [
 
 const initialState: CustomerState = {
   allCutomers: [...defaultCustomers],
+  selectedCustomer: null,
 };
 
 @Injectable({
@@ -42,13 +44,24 @@ export class CustomerStateService extends StateService<CustomerState> {
     super(initialState);
   }
 
-  allCustomers$: Observable<any[]> = this.select((state) => {
+  allCustomers$: Observable<Customer[]> = this.select((state) => {
     return state.allCutomers;
   });
 
-  addCustomer(newCustomer: any) {
+  selectedCustomer$: Observable<Customer | null | undefined> = this.select(
+    (state) => {
+      return state.selectedCustomer;
+    }
+  );
+
+  addCustomer(newCustomer: Customer) {
     this.setState({
-      allCutomers: [newCustomer,...this.state.allCutomers],
+      allCutomers: [newCustomer, ...this.state.allCutomers],
+    });
+  }
+  setSelectedCustomer(customer: Customer | null) {
+    this.setState({
+      selectedCustomer: customer,
     });
   }
 }

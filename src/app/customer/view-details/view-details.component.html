@@ -1,7 +1,102 @@
 <div class="customer-details">
   <div class="verticle-details">
-    <div class="verticle-details__top"></div>
-    <div class="verticle-details__bottom"></div>
+    <div class="verticle-details__top p-2">
+      <!-- <button mat-mini-fab color="primary">
+        <mat-icon class="text-white">place</mat-icon>
+      </button>
+      <button mat-mini-fab color="primary">
+        <mat-icon class="text-white">visibility</mat-icon>
+      </button>
+      <button mat-mini-fab color="primary">
+        <mat-icon class="text-white">edit</mat-icon>
+      </button>
+      <button mat-mini-fab color="primary">
+        <mat-icon class="text-white">open_in_full</mat-icon>
+      </button> -->
+      <div class="customer-name">
+        <h3>{{selectedCustomer?.name}}</h3>
+        <p>Vert: Frank Peters</p>
+      </div>
+      <div class="best-selling">
+        <p>START BESTELLING</p>
+      </div>
+    </div>
+    <div class="verticle-details__bottom">
+      <div class="d-flex align-items-center py-3">
+        <button class="mx-2" mat-mini-fab color="primary">
+          <mat-icon class="text-white">place</mat-icon>
+        </button>
+        <div class="d-flex flex-column">
+          <p class="m-0 p-0">De Hondenzaak</p>
+          <p class="m-0 p-0">3900 Neerpelt</p>
+        </div>
+        <p class="p-0 text-danger m-auto">-562,10 €</p>
+      </div>
+      <div class="d-flex align-items-center py-3 w-100">
+        <button class="mx-2" mat-mini-fab color="primary">
+          <mat-icon class="text-white">place</mat-icon>
+        </button>
+        <div class="d-flex flex-column justify-self-start">
+          <p class="m-0 p-0">De Hondenzaak</p>
+          <p class="m-0 p-0">3900 Neerpelt</p>
+        </div>
+        <p class="p-0 text-danger m-auto">-562,10 €</p>
+      </div>
+      <div class="d-flex align-items-center py-3">
+        <button class="mx-2" mat-mini-fab color="primary">
+          <mat-icon class="text-white">place</mat-icon>
+        </button>
+        <div class="d-flex flex-column">
+          <p class="m-0 p-0">De Hondenzaak</p>
+          <p class="m-0 p-0">3900 Neerpelt</p>
+        </div>
+        <p class="p-0 text-danger m-auto">-562,10 €</p>
+      </div>
+
+      <button mat-mini-fab color="primary" class="expand-btn">
+        <mat-icon class="text-white">open_in_full</mat-icon>
+      </button>
+    </div>
   </div>
-  <div class="bottom-details"></div>
+  <div class="bottom-details">
+    <div class="wrapper">
+      <div class="d-flex flex-column w-50">
+        <div class="d-flex align-items-center py-3 w-100">
+          <button class="mx-2" mat-mini-fab color="primary">
+            <mat-icon class="text-white">place</mat-icon>
+          </button>
+          <div class="d-flex flex-column justify-self-start">
+            <p class="m-0 p-0">{{selectedCustomer?.firstAddress}}</p>
+            <p class="m-0 p-0">{{selectedCustomer?.secondAddress}}</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center py-3 w-100">
+          <button class="mx-2" mat-mini-fab color="primary">
+            <mat-icon class="text-white">call</mat-icon>
+          </button>
+          <div class="d-flex flex-column justify-self-start">
+            <p class="m-0 p-0">{{selectedCustomer?.phoneNumber}}</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center py-3 w-100">
+          <button class="mx-2" mat-mini-fab color="primary">
+            <mat-icon class="text-white">mail</mat-icon>
+          </button>
+          <div class="d-flex flex-column justify-self-start">
+            <p class="m-0 p-0">{{selectedCustomer?.email}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex  py-3 w-100">
+        <button class="mx-2" mat-mini-fab color="primary">
+          <mat-icon class="text-white">mail</mat-icon>
+        </button>
+        <div class="d-flex flex-column justify-self-start">
+         <div *ngFor="let time of days">
+           <p>{{selectedCustomer?.openingTime[time]}}</p>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

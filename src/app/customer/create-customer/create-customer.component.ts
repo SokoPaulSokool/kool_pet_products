@@ -72,6 +72,7 @@ export class CreateCustomerComponent implements OnInit {
         name,
         firstAddress,
         secondAddress,
+        phoneNumber,
         postCode,
         email,
         openingTime: { mon, tue, wed, thur, fri, sat, sun },

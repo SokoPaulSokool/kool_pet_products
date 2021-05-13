@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { SubSink } from 'subsink';
+import { Customer } from '../../interfaces/all-interfaces';
 
 @Component({
   selector: 'app-search-customer',
@@ -53,8 +54,9 @@ export class SearchCustomerComponent implements OnInit {
     }
   }
 
-  viewDetails() {
+  viewDetails(customer: Customer) {
     this.router.navigate(['view-details']);
+    this.customerStateService.setSelectedCustomer(customer)
   }
   ngOnDestroy() {
     this.subs.unsubscribe();

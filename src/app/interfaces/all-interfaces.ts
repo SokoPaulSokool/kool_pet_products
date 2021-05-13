@@ -1,4 +1,3 @@
-
 export interface Customer {
   name: string;
   firstAddress: string;
@@ -6,7 +5,7 @@ export interface Customer {
   postCode: string;
   phoneNumber?: string;
   email: string;
-  openingTime: OpeningTime
+  openingTime: OpeningTime;
 }
 export interface OpeningTime {
   mon: string;
@@ -20,4 +19,5 @@ export interface OpeningTime {
 
 export interface CustomerState {
   allCutomers: Customer[];
+  selectedCustomer?: Customer| null;
 }
