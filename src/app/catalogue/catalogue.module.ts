@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CatalogueRoutingModule } from './catalogue-routing.module';
 import { ItemsListComponent } from './items-list/items-list.component';
 import { ItemComponent } from './item/item.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ItemComponent } from './item/item.component';
   ],
   imports: [
     CommonModule,
-    CatalogueRoutingModule
+    CatalogueRoutingModule,
+    MatIconModule
   ]
 })
 export class CatalogueModule { }

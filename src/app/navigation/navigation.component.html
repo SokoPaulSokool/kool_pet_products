@@ -40,6 +40,15 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="" class="d-flex position-relative tool">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
       <div class="d-flex" *ngIf="currentPath === 'catalogue'">
         <div class="ml-auto">
           <div class="toggle">

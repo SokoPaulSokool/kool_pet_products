@@ -2,6 +2,7 @@
 .item {
   width: 100%;
   min-height: 300px;
+  max-height: 300px;
   margin: 10px 5px;
   border: 2px solid #66cccc;
   border-radius: 10px;
@@ -44,6 +45,7 @@
   height: 35px;
   z-index: 2;
   border: 1px solid #66cccc;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +57,16 @@
 
 .item-icon {
   width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+.details {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 10px;
+  z-index: -1;
 }
 
 .actions-circles {
@@ -64,6 +76,10 @@
   border-radius: 50%;
   position: absolute;
   bottom: 10px;
+  background: #66cccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle-subtract {

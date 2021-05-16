@@ -21,3 +21,13 @@ export interface CustomerState {
   allCutomers: Customer[];
   selectedCustomer?: Customer| null;
 }
+
+
+export interface Product {
+  id: number;
+  name: string;
+  dimesions: string;
+  price: string;
+  count: number;
+  total: number;
+}
